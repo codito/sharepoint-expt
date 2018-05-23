@@ -61,9 +61,41 @@ namespace websvc
             System.Console.WriteLine(terms);
         }
 
+        public void AddTerms()
+        {
+            // Left as an exercise
+        }
+
+        public void GetKeywordTermsByGuid()
+        {
+            // You can find these Ids from Term Store Manager page, expand the Keyword terms and click on any term
+            // Look for "Unique Identifier" value
+            var termIds = "<termIds><termId>97584556-149b-4c90-b9ae-060d29e446a4</termId></termIds>";
+            var terms = this.client.GetKeywordTermsByGuids(termIds, this.englishLCID);
+
+            System.Console.WriteLine(terms);
+        }
+
+        public void GetChildTermsInTermSet()
+        {
+            // Left as an exercise
+        }
+
+        public void GetChildTermsInTerm()
+        {
+            // Left as an exercise
+        }
+
         public void Demo()
         {
+            System.Console.WriteLine("--- GetTermSets demo");
+            this.GetTermSets();
+
+            System.Console.WriteLine("--- GetTermsByLabel demo");
             this.GetTermsByLabel("V");
+
+            System.Console.WriteLine("--- GetKeywordTermsByGuid demo");
+            this.GetKeywordTermsByGuid();
         }
     }
 }
