@@ -8,6 +8,9 @@ namespace spconsole
     {
         static void Main(string[] args)
         {
+            var soapClient = new SoapClientExample();
+            soapClient.Demo();
+
             Console.WriteLine("Hello World!");
         }
     }
