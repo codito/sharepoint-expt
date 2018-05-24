@@ -11,7 +11,7 @@
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
             "program": "${workspaceFolder}/src/spconsole/bin/Debug/netcoreapp2.0/spconsole.dll",
-            "args": [],
+            "args": ["def"],
             "cwd": "${workspaceFolder}/src/spconsole",
             // For more information about the 'console' field, see https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md#console-terminal-window
             "console": "internalConsole",
@@ -21,6 +21,26 @@
         {
             "name": ".NET Core Attach",
             "type": "coreclr",
+            "request": "attach",
+            "processId": "${command:pickProcess}"
+        },
+        {
+            "name": ".NET Launch (console)",
+            "type": "clr",
+            "request": "launch",
+            "preLaunchTask": "build",
+            // If you have changed target frameworks, make sure to update the program path.
+            "program": "${workspaceFolder}/src/spconsole/bin/Debug/net46/spconsole.exe",
+            "args": ["def"],
+            "cwd": "${workspaceFolder}/src/spconsole",
+            // For more information about the 'console' field, see https://github.com/OmniSharp/omnisharp-vscode/blob/master/debugger-launchjson.md#console-terminal-window
+            "console": "internalConsole",
+            "stopAtEntry": false,
+            "internalConsoleOptions": "openOnSessionStart"
+        },
+        {
+            "name": ".NET Attach",
+            "type": "clr",
             "request": "attach",
             "processId": "${command:pickProcess}"
         }
