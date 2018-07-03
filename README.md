@@ -4,6 +4,10 @@ Experiments with SharePoint focused on the Enterprise Content Management capabil
 ## Requirements
 These experiments are with .NET core, you will need SDK >= 2.0 to run the examples. I used vscode, you can bring your favorite editor.
 
+1. Get .NET core sdk from https://www.microsoft.com/net/download/windows
+2. Build the code: `dotnet build`
+3. Run the spconsole project: `dotnet run --project .\src\spconsole\spconsole.csproj csom`
+
 ## SharePoint SOAP
 Sample code is in `src/websvc` directory. Tested in an on-premise deployment.
 
